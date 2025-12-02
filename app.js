@@ -1,23 +1,73 @@
-// const heading = React.createElement( "h1", { id: "heading" },"Hii Snehal!");
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-// const root = ReactDOM.createRoot(document.getElementById("root"));
 
-// root.render(heading);
+// react element single line
+const heading = <h1 id="heading"> Namaste Javascript from react element multiline ✨ </h1>;
 
-const parent = React.createElement("div" , {id: "parent"} ,
-    [
-        React.createElement("div" , {id: "child1"} ,
-            [
-                React.createElement("h1" , {id: "heading1"} , 'snehal'),
-                React.createElement("h1" , {id: "heading2"} , 'shubham')
-            ]),
-        React.createElement("div" , {id: "child2"} , 
-            [
-                React.createElement("h1" , {id: "heading3"} , 'snehal'),
-                React.createElement("h1" , {id: "heading4"} , 'shubham')
-            ])
-]);
+// React element multi line
+const headingElement = (
+    <h1 id="heading">
+        Namaste Javascript from react element multiline ✨
+    </h1>
+);
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+// functional component is normal javascript function returns jsx
+const HeadingComponent = () => <h1 className="heading"> Namaste Javascript from functional component single line ✨ </h1>;
 
-root.render(parent);
+const TitleComponent = () => <h1 className="heading"> Namaste Javascript Title ✨ </h1>;
+
+const NormalFunctionComponent = function () {
+    return <h2>I want to learn react</h2>
+}
+
+const title = (
+    <h3>This is react element</h3>
+)
+
+// {} in this we can write any js code
+// 1. variable
+
+let number = 100000;
+
+const HeadingComponentMultiline = () => {
+    return <div id="container">
+                <NormalFunctionComponent />
+                <TitleComponent />
+                {number}
+                {title}
+                <h1 className="heading">
+                    Namaste Javascript from functional component multi line ✨ 
+                </h1>
+            </div>;
+}
+
+// with parenthesis
+
+// const HeadingComponentMultiline = () => (
+//     <div id="container">
+//         <NormalFunctionComponent />
+//         <TitleComponent />
+//         <h1 className="heading">
+//             Namaste Javascript from functional component multi line ✨
+//         </h1>
+//     </div>
+// );
+
+
+
+
+
+
+
+
+
+
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+// rederering element
+// root.render(headingElement);
+
+// rederering component
+root.render(<HeadingComponentMultiline></HeadingComponentMultiline>);
