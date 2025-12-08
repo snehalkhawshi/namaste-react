@@ -1,73 +1,625 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import logo from "./assets/logo.jpg";
 
+/*
+  Header
+    -- logo 
+    -- nav item
 
-// react element single line
-const heading = <h1 id="heading"> Namaste Javascript from react element multiline ✨ </h1>;
+  Body
+    -- search
+    -- RestaurentCard
+      --- Img
+      --- Name of res, star rating, cuisines, delivery time
 
-// React element multi line
-const headingElement = (
-    <h1 id="heading">
-        Namaste Javascript from react element multiline ✨
-    </h1>
-);
+  Footer
+    -- Copyright
+    -- Links
+    -- Address
+    -- Contact  
+*/
 
-// functional component is normal javascript function returns jsx
-const HeadingComponent = () => <h1 className="heading"> Namaste Javascript from functional component single line ✨ </h1>;
+let foodList = [
+    {
+		card: {
+			card: {
+				"@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+				info: {
+					id: "238086",
+					name: "Chinese chef co",
+					cloudinaryImageId: "vgg06be2a0varwpmij7w",
+					locality: "NIBM road ",
+					areaName: "Bibwewadi",
+					costForTwo: "₹300 for two",
+					cuisines: ["Chinese", "Fast Food", "Asian"],
+					avgRating: 3.7,
+					parentId: "61635",
+					avgRatingString: "3.7",
+					totalRatingsString: "1K+",
+					promoted: true,
+					adTrackingId:
+					"cid=10699488~p=1~eid=0000018d-2d57-7aea-6994-b4dc007a0145~srvts=1705862724330~83647",
+					sla: {
+						deliveryTime: 53,
+						lastMileTravel: 9.5,
+						serviceability: "SERVICEABLE",
+						slaString: "53 mins",
+						lastMileTravelString: "9.5 km",
+						iconType: "ICON_TYPE_EMPTY",
+					},
+					availability: {
+						nextCloseTime: "2024-01-22 06:00:00",
+						opened: true,
+					},
+					badges: {},
+					select: true,
+					isOpen: true,
+					type: "F",
+					badgesV2: {
+						entityBadges: {
+							textExtendedBadges: {},
+							textBased: {},
+							imageBased: {},
+						},
+					},
+					aggregatedDiscountInfoV3: {
+						header: "₹125 OFF",
+						subHeader: "ABOVE ₹249",
+						discountTag: "FLAT DEAL",
+					},
+					orderabilityCommunication: {
+						title: {},
+						subTitle: {},
+						message: {},
+						customIcon: {},
+					},
+					differentiatedUi: {
+						displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+						differentiatedUiMediaDetails: {
+							mediaType: "ADS_MEDIA_ENUM_IMAGE",
+							lottie: {},
+							video: {},
+						},
+					},
+					reviewsSummary: {},
+					displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+					restaurantOfferPresentationInfo: {},
+				},
+				analytics: {},
+				cta: {
+					link: "swiggy://menu?restaurant_id=238086&source=collection&query=Chinese",
+					text: "RESTAURANT_MENU",
+					type: "DEEPLINK",
+				},
+				widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food",
+			},
+			relevance: {
+				type: "RELEVANCE_TYPE_ON_MENU_RETURN",
+				sectionId: "MENU_RETURN_FOOD",
+			},
+		},
+    },
+    {
+		card: {
+			card: {
+			"@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+			info: {
+				id: "220133",
+				name: "Blue dragon chinese katta",
+				cloudinaryImageId: "mghsabzobwhg3sbck4bp",
+				locality: "Chondhe Patil Road",
+				areaName: "Aundh",
+				costForTwo: "₹200 for two",
+				cuisines: ["Chinese"],
+				avgRating: 4.3,
+				parentId: "48025",
+				avgRatingString: "4.3",
+				totalRatingsString: "100+",
+				promoted: true,
+				adTrackingId:
+				"cid=10703660~p=2~eid=0000018d-2d57-7aea-6994-b4dd007a0272~srvts=1705862724330~83647",
+				sla: {
+					deliveryTime: 43,
+					lastMileTravel: 7.5,
+					serviceability: "SERVICEABLE",
+					slaString: "43 mins",
+					lastMileTravelString: "7.5 km",
+					iconType: "ICON_TYPE_EMPTY",
+				},
+				availability: {
+					nextCloseTime: "2024-01-22 00:30:00",
+					opened: true,
+				},
+				badges: {},
+				isOpen: true,
+				aggregatedDiscountInfoV2: {},
+				type: "F",
+				badgesV2: {
+				entityBadges: {
+					imageBased: {},
+					textExtendedBadges: {},
+					textBased: {},
+				},
+				},
+				orderabilityCommunication: {
+					title: {},
+					subTitle: {},
+					message: {},
+					customIcon: {},
+				},
+				differentiatedUi: {
+				displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+				differentiatedUiMediaDetails: {
+					mediaType: "ADS_MEDIA_ENUM_IMAGE",
+					lottie: {},
+					video: {},
+				},
+				},
+				reviewsSummary: {},
+				displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+				restaurantOfferPresentationInfo: {},
+			},
+			analytics: {},
+			cta: {
+				link: "swiggy://menu?restaurant_id=220133&source=collection&query=Chinese",
+				text: "RESTAURANT_MENU",
+				type: "DEEPLINK",
+			},
+			widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food",
+			},
+			relevance: {
+			type: "RELEVANCE_TYPE_ON_MENU_RETURN",
+			sectionId: "MENU_RETURN_FOOD",
+			},
+		},
+    },
+    {
+		card: {
+			card: {
+			"@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+			info: {
+				id: "482340",
+				name: "Ching's Essence",
+				cloudinaryImageId: "v0lc5djb1ouyci5y3sqv",
+				locality: "Kedari Nagar",
+				areaName: "Wanowrie",
+				costForTwo: "₹200 for two",
+				cuisines: ["North Indian", "Chinese"],
+				avgRating: 4.1,
+				parentId: "365673",
+				avgRatingString: "4.1",
+				totalRatingsString: "20+",
+				promoted: true,
+				adTrackingId:
+				"cid=10666937~p=3~eid=0000018d-2d57-7aea-6994-b4de007a034f~srvts=1705862724330~83647",
+				sla: {
+				deliveryTime: 46,
+				lastMileTravel: 7.6,
+				serviceability: "SERVICEABLE",
+				slaString: "46 mins",
+				lastMileTravelString: "7.6 km",
+				iconType: "ICON_TYPE_EMPTY",
+				},
+				availability: {
+				nextCloseTime: "2024-01-22 04:00:00",
+				opened: true,
+				},
+				badges: {},
+				isOpen: true,
+				aggregatedDiscountInfoV2: {},
+				type: "F",
+				badgesV2: {
+				entityBadges: {
+					textExtendedBadges: {},
+					textBased: {},
+					imageBased: {},
+				},
+				},
+				orderabilityCommunication: {
+				title: {},
+				subTitle: {},
+				message: {},
+				customIcon: {},
+				},
+				differentiatedUi: {
+				displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+				differentiatedUiMediaDetails: {
+					mediaType: "ADS_MEDIA_ENUM_IMAGE",
+					lottie: {},
+					video: {},
+				},
+				},
+				reviewsSummary: {},
+				displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+				restaurantOfferPresentationInfo: {},
+			},
+			analytics: {},
+			cta: {
+				link: "swiggy://menu?restaurant_id=482340&source=collection&query=Chinese",
+				text: "RESTAURANT_MENU",
+				type: "DEEPLINK",
+			},
+			widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food",
+			},
+			relevance: {
+			type: "RELEVANCE_TYPE_ON_MENU_RETURN",
+			sectionId: "MENU_RETURN_FOOD",
+			},
+		},
+    },
+    {
+		card: {
+			card: {
+			"@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+			info: {
+				id: "464690",
+				name: "Lallantop Dhaba Bar",
+				cloudinaryImageId: "do5fnhlhauhyez64ci44",
+				locality: "Baner",
+				areaName: "Baner",
+				costForTwo: "₹800 for two",
+				cuisines: ["Tandoor", "Pastas", "Pizzas"],
+				avgRating: 3.8,
+				parentId: "279044",
+				avgRatingString: "3.8",
+				totalRatingsString: "20+",
+				promoted: true,
+				adTrackingId:
+				"cid=10200246~p=4~eid=0000018d-2d57-7aea-6994-b4df007a040a~srvts=1705862724330~83647",
+				sla: {
+				deliveryTime: 45,
+				lastMileTravel: 9.2,
+				serviceability: "SERVICEABLE",
+				slaString: "45 mins",
+				lastMileTravelString: "9.2 km",
+				iconType: "ICON_TYPE_EMPTY",
+				},
+				availability: {
+				nextCloseTime: "2024-01-22 02:00:00",
+				opened: true,
+				},
+				badges: {},
+				isOpen: true,
+				aggregatedDiscountInfoV2: {},
+				type: "F",
+				badgesV2: {
+				entityBadges: {
+					textBased: {},
+					imageBased: {},
+					textExtendedBadges: {},
+				},
+				},
+				orderabilityCommunication: {
+				title: {},
+				subTitle: {},
+				message: {},
+				customIcon: {},
+				},
+				differentiatedUi: {
+				displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+				differentiatedUiMediaDetails: {
+					mediaType: "ADS_MEDIA_ENUM_IMAGE",
+					lottie: {},
+					video: {},
+				},
+				},
+				reviewsSummary: {},
+				displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+				restaurantOfferPresentationInfo: {},
+			},
+			analytics: {},
+			cta: {
+				link: "swiggy://menu?restaurant_id=464690&source=collection&query=Chinese",
+				text: "RESTAURANT_MENU",
+				type: "DEEPLINK",
+			},
+			widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food",
+			},
+			relevance: {
+			type: "RELEVANCE_TYPE_ON_MENU_RETURN",
+			sectionId: "MENU_RETURN_FOOD",
+			},
+		},
+    },
+    {
+		card: {
+			card: {
+			"@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+			info: {
+				id: "47314",
+				name: "Raje Chinese",
+				cloudinaryImageId: "sawoh1eafncswhitstsb",
+				locality: "Babajan Chowk",
+				areaName: "Camp Area",
+				costForTwo: "₹400 for two",
+				cuisines: ["Chinese"],
+				avgRating: 4,
+				parentId: "165513",
+				avgRatingString: "4.0",
+				totalRatingsString: "1K+",
+				sla: {
+				deliveryTime: 34,
+				lastMileTravel: 3,
+				serviceability: "SERVICEABLE",
+				slaString: "34 mins",
+				lastMileTravelString: "3.0 km",
+				iconType: "ICON_TYPE_EMPTY",
+				},
+				availability: {
+				nextCloseTime: "2024-01-22 00:25:00",
+				opened: true,
+				},
+				badges: {},
+				isOpen: true,
+				aggregatedDiscountInfoV2: {},
+				type: "F",
+				badgesV2: {
+				entityBadges: {
+					textBased: {},
+					imageBased: {},
+					textExtendedBadges: {},
+				},
+				},
+				orderabilityCommunication: {
+				title: {},
+				subTitle: {},
+				message: {},
+				customIcon: {},
+				},
+				differentiatedUi: {
+				displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+				differentiatedUiMediaDetails: {
+					mediaType: "ADS_MEDIA_ENUM_IMAGE",
+					lottie: {},
+					video: {},
+				},
+				},
+				reviewsSummary: {},
+				displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+				restaurantOfferPresentationInfo: {},
+			},
+			analytics: {},
+			cta: {
+				link: "swiggy://menu?restaurant_id=47314&source=collection&query=Chinese",
+				text: "RESTAURANT_MENU",
+				type: "DEEPLINK",
+			},
+			widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food",
+			},
+			relevance: {
+			type: "RELEVANCE_TYPE_ON_MENU_RETURN",
+			sectionId: "MENU_RETURN_FOOD",
+			},
+		},
+    },
+    {
+		card: {
+			card: {
+			"@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+			info: {
+				id: "228565",
+				name: "Subhanallah Biryani House",
+				cloudinaryImageId: "kvznqnzyop4voh5jryfq",
+				locality: "Azam Campus",
+				areaName: "Camp Area",
+				costForTwo: "₹200 for two",
+				cuisines: [
+				"Biryani",
+				"Chinese",
+				"North Indian",
+				"Mughlai",
+				"Beverages",
+				],
+				avgRating: 3.7,
+				parentId: "196247",
+				avgRatingString: "3.7",
+				totalRatingsString: "500+",
+				sla: {
+				deliveryTime: 28,
+				lastMileTravel: 3,
+				serviceability: "SERVICEABLE",
+				slaString: "28 mins",
+				lastMileTravelString: "3.0 km",
+				iconType: "ICON_TYPE_EMPTY",
+				},
+				availability: {
+				nextCloseTime: "2024-01-22 04:00:00",
+				opened: true,
+				},
+				badges: {},
+				isOpen: true,
+				type: "F",
+				badgesV2: {
+				entityBadges: {
+					imageBased: {},
+					textExtendedBadges: {},
+					textBased: {},
+				},
+				},
+				aggregatedDiscountInfoV3: {
+				header: "20% OFF",
+				subHeader: "UPTO ₹50",
+				},
+				orderabilityCommunication: {
+				title: {},
+				subTitle: {},
+				message: {},
+				customIcon: {},
+				},
+				differentiatedUi: {
+				displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+				differentiatedUiMediaDetails: {
+					mediaType: "ADS_MEDIA_ENUM_IMAGE",
+					lottie: {},
+					video: {},
+				},
+				},
+				reviewsSummary: {},
+				displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+				restaurantOfferPresentationInfo: {},
+			},
+			analytics: {},
+			cta: {
+				link: "swiggy://menu?restaurant_id=228565&source=collection&query=Chinese",
+				text: "RESTAURANT_MENU",
+				type: "DEEPLINK",
+			},
+			widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food",
+			},
+			relevance: {
+			type: "RELEVANCE_TYPE_ON_MENU_RETURN",
+			sectionId: "MENU_RETURN_FOOD",
+			},
+		},
+    },
+    {
+		card: {
+			card: {
+			"@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+			info: {
+				id: "229286",
+				name: "Mandarin Oak- The Heavenly Chinese",
+				cloudinaryImageId: "f73a4f3de059966f925d587cca28e17c",
+				locality: "Law College Road",
+				areaName: "Erandwane",
+				costForTwo: "₹350 for two",
+				cuisines: ["Chinese", "Oriental", "Pan-Asian", "Snacks"],
+				avgRating: 4,
+				parentId: "2320",
+				avgRatingString: "4.0",
+				totalRatingsString: "50+",
+				sla: {
+				deliveryTime: 28,
+				lastMileTravel: 3.9,
+				serviceability: "SERVICEABLE",
+				slaString: "28 mins",
+				lastMileTravelString: "3.9 km",
+				iconType: "ICON_TYPE_EMPTY",
+				},
+				availability: {
+				nextCloseTime: "2024-01-22 01:00:00",
+				opened: true,
+				},
+				badges: {},
+				isOpen: true,
+				aggregatedDiscountInfoV2: {},
+				type: "F",
+				badgesV2: {
+				entityBadges: {
+					textBased: {},
+					imageBased: {},
+					textExtendedBadges: {},
+				},
+				},
+				orderabilityCommunication: {
+				title: {},
+				subTitle: {},
+				message: {},
+				customIcon: {},
+				},
+				differentiatedUi: {
+				displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+				differentiatedUiMediaDetails: {
+					mediaType: "ADS_MEDIA_ENUM_IMAGE",
+					lottie: {},
+					video: {},
+				},
+				},
+				reviewsSummary: {},
+				displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+				restaurantOfferPresentationInfo: {},
+			},
+			analytics: {},
+			cta: {
+				link: "swiggy://menu?restaurant_id=229286&source=collection&query=Chinese",
+				text: "RESTAURANT_MENU",
+				type: "DEEPLINK",
+			},
+			widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food",
+			},
+			relevance: {
+			type: "RELEVANCE_TYPE_ON_MENU_RETURN",
+			sectionId: "MENU_RETURN_FOOD",
+			},
+		},
+    },
+  ];
 
-const TitleComponent = () => <h1 className="heading"> Namaste Javascript Title ✨ </h1>;
+const Header = () => {
+  return (
+    <div className="header">
+      <div className="logo-container">
+        <img
+          className="logo"
+          src="https://marketplace.canva.com/EAFpeiTrl4c/2/0/1600w/canva-abstract-chef-cooking-restaurant-free-logo-a1RYzvS1EFo.jpg"
+          alt="Logo"
+        />
+      </div>
 
-const NormalFunctionComponent = function () {
-    return <h2>I want to learn react</h2>
-}
+      <div className="nav-items">
+        <ul>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>Cart</li>
+        </ul>
+      </div>
+    </div>
+  );
+};
 
-const title = (
-    <h3>This is react element</h3>
-)
+const RestaurantCard = ({restaurentData}) => {
+	
+	const info = restaurentData?.card?.card?.info || {};
 
-// {} in this we can write any js code
-// 1. variable
+	let {
+		cloudinaryImageId = {},
+		name = "Unknown",
+		cuisines = [],
+		avgRating = "-",
+		sla = {}
+	} = info;
+    
+	const imageUrl = cloudinaryImageId
+    ? `https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy/${cloudinaryImageId}`
+    : "https://via.placeholder.com/300x200?text=No+Image";
 
-let number = 100000;
+	return (
+		<div className="restaurent-card">
+			<img
+				alt={`${name} image`}
+				className="res-card-image"
+				src={imageUrl}
+			/>
+			<h3>{name}</h3>
+			<h4>{Array.isArray(cuisines) ? cuisines.join(" , ") : cuisines}</h4>
+			<h4>{avgRating}</h4>
+			<h4>{sla?.deliveryTime ? `${sla.deliveryTime} minutes` : "N/A"}</h4>
+		</div>
+	);
+};
 
-const HeadingComponentMultiline = () => {
-    return <div id="container">
-                <NormalFunctionComponent />
-                <TitleComponent />
-                {number}
-                {title}
-                <h1 className="heading">
-                    Namaste Javascript from functional component multi line ✨ 
-                </h1>
-            </div>;
-}
+const Body = () => {
+	return (
+		<div className="body">
+			<div className="search">Search</div>
 
-// with parenthesis
+			<div className="restaurent-container">
+				{ foodList.map((restaurant) => <RestaurantCard key = {restaurant.card.card.info.id} restaurentData = {restaurant}/>) }
+			</div>
+		</div>
+	);
+};
 
-// const HeadingComponentMultiline = () => (
-//     <div id="container">
-//         <NormalFunctionComponent />
-//         <TitleComponent />
-//         <h1 className="heading">
-//             Namaste Javascript from functional component multi line ✨
-//         </h1>
-//     </div>
-// );
+const AppLayout = () => {
+  return (
+    <div className="container">
+      <Header />
+      <Body />
+    </div>
+  );
+};
 
-
-
-
-
-
-
-
-
-
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-
-// rederering element
-// root.render(headingElement);
-
-// rederering component
-root.render(<HeadingComponentMultiline></HeadingComponentMultiline>);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<AppLayout />);
