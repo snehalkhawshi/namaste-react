@@ -21,3 +21,47 @@
 - differential bundling
 - tree shaking
 - different build dev and prod
+
+
+# Namaste food 
+
+
+/*
+  Header
+    -- logo 
+    -- nav item
+
+  Body
+    -- search
+    -- RestaurentCard
+      --- Img
+      --- Name of res, star rating, cuisines, delivery time
+
+  Footer
+    -- Copyright
+    -- Links
+    -- Address
+    -- Contact  
+*/
+
+
+# Two types of import / export
+
+- Default Export/Import
+
+---- export default Component;
+---- import component from "path";
+
+- Nmaed Export/Import
+
+---- export Component;
+---- import {component} from "path";
+
+# React Hooks
+  (Normal js utility functions)
+
+- useState() - superpowerful state variable
+- useEffect()
+
+
+

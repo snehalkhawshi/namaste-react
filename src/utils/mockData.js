@@ -1,26 +1,4 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import logo from "./assets/logo.jpg";
-
-/*
-  Header
-    -- logo 
-    -- nav item
-
-  Body
-    -- search
-    -- RestaurentCard
-      --- Img
-      --- Name of res, star rating, cuisines, delivery time
-
-  Footer
-    -- Copyright
-    -- Links
-    -- Address
-    -- Contact  
-*/
-
-let foodList = [
+let restaurentData = [
     {
 		card: {
 			card: {
@@ -544,82 +522,6 @@ let foodList = [
 			},
 		},
     },
-  ];
+];
 
-const Header = () => {
-  return (
-    <div className="header">
-      <div className="logo-container">
-        <img
-          className="logo"
-          src="https://marketplace.canva.com/EAFpeiTrl4c/2/0/1600w/canva-abstract-chef-cooking-restaurant-free-logo-a1RYzvS1EFo.jpg"
-          alt="Logo"
-        />
-      </div>
-
-      <div className="nav-items">
-        <ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
-          <li>Cart</li>
-        </ul>
-      </div>
-    </div>
-  );
-};
-
-const RestaurantCard = ({restaurentData}) => {
-	
-	const info = restaurentData?.card?.card?.info || {};
-
-	let {
-		cloudinaryImageId = {},
-		name = "Unknown",
-		cuisines = [],
-		avgRating = "-",
-		sla = {}
-	} = info;
-    
-	const imageUrl = cloudinaryImageId
-    ? `https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy/${cloudinaryImageId}`
-    : "https://via.placeholder.com/300x200?text=No+Image";
-
-	return (
-		<div className="restaurent-card">
-			<img
-				alt={`${name} image`}
-				className="res-card-image"
-				src={imageUrl}
-			/>
-			<h3>{name}</h3>
-			<h4>{Array.isArray(cuisines) ? cuisines.join(" , ") : cuisines}</h4>
-			<h4>{avgRating}</h4>
-			<h4>{sla?.deliveryTime ? `${sla.deliveryTime} minutes` : "N/A"}</h4>
-		</div>
-	);
-};
-
-const Body = () => {
-	return (
-		<div className="body">
-			<div className="search">Search</div>
-
-			<div className="restaurent-container">
-				{ foodList.map((restaurant) => <RestaurantCard key = {restaurant.card.card.info.id} restaurentData = {restaurant}/>) }
-			</div>
-		</div>
-	);
-};
-
-const AppLayout = () => {
-  return (
-    <div className="container">
-      <Header />
-      <Body />
-    </div>
-  );
-};
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppLayout />);
+export default restaurentData;
