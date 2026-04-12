@@ -64,4 +64,30 @@
 - useEffect()
 
 
+# Two types of routing in web app
 
+  - client side routing
+  - server side routing
+
+# Redux Toolkit
+  - Install libraries
+    - @reduxjs/toolkit and react-redux
+  - Build our store
+  - Connect our store to our app
+  - Slice(cartSlice)
+  - dispatch(action)
+  - Selector
+
+# Types of Testing
+  - Unit Testing
+  - Integration Testing
+  - End to End Testing - (e2e testing)
+
+# Setting up testing
+  - Install react testing library 
+  - Installed jest
+  - Installed babel dependencies
+  - Cofigure babel
+  - Configure Parcel Config file to disable default babel tranpilation
+  - Jest configuration - npx create-jest
+  - Install jsdom library

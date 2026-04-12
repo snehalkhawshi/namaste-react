@@ -1,0 +1,255 @@
+{
+  "restaurants": [
+    {
+      "card": {
+        "card": {
+          "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+          "info": {
+            "id": "238086",
+            "name": "Chinese chef co",
+            "cloudinaryImageId": "vgg06be2a0varwpmij7w",
+            "locality": "NIBM road ",
+            "areaName": "Bibwewadi",
+            "costForTwo": "₹300 for two",
+            "cuisines": ["Chinese", "Fast Food", "Asian"],
+            "avgRating": 3.7,
+            "parentId": "61635",
+            "avgRatingString": "3.7",
+            "totalRatingsString": "1K+",
+            "promoted": true,
+            "sla": {
+              "deliveryTime": 53,
+              "lastMileTravel": 9.5,
+              "serviceability": "SERVICEABLE",
+              "slaString": "53 mins",
+              "lastMileTravelString": "9.5 km",
+              "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+              "nextCloseTime": "2024-01-22 06:00:00",
+              "opened": true
+            },
+            "isOpen": true,
+            "type": "F",
+            "aggregatedDiscountInfoV3": {
+              "header": "₹125 OFF",
+              "subHeader": "ABOVE ₹249",
+              "discountTag": "FLAT DEAL"
+            }
+          }
+        }
+      }
+    },
+    {
+      "card": {
+        "card": {
+          "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+          "info": {
+            "id": "220133",
+            "name": "Blue dragon chinese katta",
+            "cloudinaryImageId": "mghsabzobwhg3sbck4bp",
+            "locality": "Chondhe Patil Road",
+            "areaName": "Aundh",
+            "costForTwo": "₹200 for two",
+            "cuisines": ["Chinese"],
+            "avgRating": 4.3,
+            "parentId": "48025",
+            "avgRatingString": "4.3",
+            "totalRatingsString": "100+",
+            "promoted": true,
+            "sla": {
+              "deliveryTime": 43,
+              "lastMileTravel": 7.5,
+              "serviceability": "SERVICEABLE",
+              "slaString": "43 mins",
+              "lastMileTravelString": "7.5 km",
+              "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+              "nextCloseTime": "2024-01-22 00:30:00",
+              "opened": true
+            },
+            "isOpen": true,
+            "type": "F"
+          }
+        }
+      }
+    },
+    {
+      "card": {
+        "card": {
+          "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+          "info": {
+            "id": "482340",
+            "name": "Ching's Essence",
+            "cloudinaryImageId": "v0lc5djb1ouyci5y3sqv",
+            "locality": "Kedari Nagar",
+            "areaName": "Wanowrie",
+            "costForTwo": "₹200 for two",
+            "cuisines": ["North Indian", "Chinese"],
+            "avgRating": 4.1,
+            "parentId": "365673",
+            "avgRatingString": "4.1",
+            "totalRatingsString": "20+",
+            "promoted": true,
+            "sla": {
+              "deliveryTime": 46,
+              "lastMileTravel": 7.6,
+              "serviceability": "SERVICEABLE",
+              "slaString": "46 mins",
+              "lastMileTravelString": "7.6 km",
+              "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+              "nextCloseTime": "2024-01-22 04:00:00",
+              "opened": true
+            },
+            "isOpen": true,
+            "type": "F"
+          }
+        }
+      }
+    },
+    {
+      "card": {
+        "card": {
+          "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+          "info": {
+            "id": "464690",
+            "name": "Lallantop Dhaba Bar",
+            "cloudinaryImageId": "do5fnhlhauhyez64ci44",
+            "locality": "Baner",
+            "areaName": "Baner",
+            "costForTwo": "₹800 for two",
+            "cuisines": ["Tandoor", "Pastas", "Pizzas"],
+            "avgRating": 3.8,
+            "parentId": "279044",
+            "avgRatingString": "3.8",
+            "totalRatingsString": "20+",
+            "promoted": true,
+            "sla": {
+              "deliveryTime": 45,
+              "lastMileTravel": 9.2,
+              "serviceability": "SERVICEABLE",
+              "slaString": "45 mins",
+              "lastMileTravelString": "9.2 km",
+              "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+              "nextCloseTime": "2024-01-22 02:00:00",
+              "opened": true
+            },
+            "isOpen": true,
+            "type": "F"
+          }
+        }
+      }
+    },
+    {
+      "card": {
+        "card": {
+          "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+          "info": {
+            "id": "47314",
+            "name": "Raje Chinese",
+            "cloudinaryImageId": "sawoh1eafncswhitstsb",
+            "locality": "Babajan Chowk",
+            "areaName": "Camp Area",
+            "costForTwo": "₹400 for two",
+            "cuisines": ["Chinese"],
+            "avgRating": 4,
+            "parentId": "165513",
+            "avgRatingString": "4.0",
+            "totalRatingsString": "1K+",
+            "sla": {
+              "deliveryTime": 34,
+              "lastMileTravel": 3,
+              "serviceability": "SERVICEABLE",
+              "slaString": "34 mins",
+              "lastMileTravelString": "3.0 km",
+              "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+              "nextCloseTime": "2024-01-22 00:25:00",
+              "opened": true
+            },
+            "isOpen": true,
+            "type": "F"
+          }
+        }
+      }
+    },
+    {
+      "card": {
+        "card": {
+          "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+          "info": {
+            "id": "228565",
+            "name": "Subhanallah Biryani House",
+            "cloudinaryImageId": "kvznqnzyop4voh5jryfq",
+            "locality": "Azam Campus",
+            "areaName": "Camp Area",
+            "costForTwo": "₹200 for two",
+            "cuisines": ["Biryani", "Chinese", "North Indian", "Mughlai", "Beverages"],
+            "avgRating": 3.7,
+            "parentId": "196247",
+            "avgRatingString": "3.7",
+            "totalRatingsString": "500+",
+            "sla": {
+              "deliveryTime": 28,
+              "lastMileTravel": 3,
+              "serviceability": "SERVICEABLE",
+              "slaString": "28 mins",
+              "lastMileTravelString": "3.0 km",
+              "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+              "nextCloseTime": "2024-01-22 04:00:00",
+              "opened": true
+            },
+            "isOpen": true,
+            "type": "F",
+            "aggregatedDiscountInfoV3": {
+              "header": "20% OFF",
+              "subHeader": "UPTO ₹50"
+            }
+          }
+        }
+      }
+    },
+    {
+      "card": {
+        "card": {
+          "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+          "info": {
+            "id": "229286",
+            "name": "Mandarin Oak- The Heavenly Chinese",
+            "cloudinaryImageId": "f73a4f3de059966f925d587cca28e17c",
+            "locality": "Law College Road",
+            "areaName": "Erandwane",
+            "costForTwo": "₹350 for two",
+            "cuisines": ["Chinese", "Oriental", "Pan-Asian", "Snacks"],
+            "avgRating": 4,
+            "parentId": "2320",
+            "avgRatingString": "4.0",
+            "totalRatingsString": "50+",
+            "sla": {
+              "deliveryTime": 28,
+              "lastMileTravel": 3.9,
+              "serviceability": "SERVICEABLE",
+              "slaString": "28 mins",
+              "lastMileTravelString": "3.9 km",
+              "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+              "nextCloseTime": "2024-01-22 01:00:00",
+              "opened": true
+            },
+            "isOpen": true,
+            "type": "F"
+          }
+        }
+      }
+    }
+  ]
+}
