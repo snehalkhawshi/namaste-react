@@ -1,5 +1,4 @@
 import React from "react";
-import User from "./user";
 import UserClass from "./UserClass";
 import UserContext from "../utils/UserContext";
 
@@ -15,7 +14,6 @@ class About extends React.Component {
         return (
             <div>
                 <h1>From User Function</h1>
-                {/* <User name={"Snehal Khawshi from function"} email={"snehalkhawshi20@gmail.com from function"} location={"Pune from function"} /> */}
                 <div>
                     LoggedIn User : 
                     <UserContext.Consumer>

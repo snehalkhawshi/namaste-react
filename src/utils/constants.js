@@ -24,8 +24,6 @@ export const isPrime = (num) => {
   return true;
 };
 
-
-
 export const findNthPrime = (n) => {
   n = Number(n);
 
