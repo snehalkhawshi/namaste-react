@@ -2,16 +2,11 @@ import { useDispatch } from "react-redux";
 import { addItem } from "../utils/cartSlice";
 
 const ItemsList = ({list, dummy}) => {
-    // to get access to dispatch use useDispatch hook
-    // dispatch is function that get from hook useDispatch
     const dispatch = useDispatch();
 
     const handleAddItem = (item) => {
-        // dispatch an action
-        dispatch(addItem(item)); // action payload is "pizza", "burger"
+        dispatch(addItem(item)); 
     }
-
-    console.log(list);
 
     return (
         <div>

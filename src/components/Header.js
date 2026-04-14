@@ -17,7 +17,6 @@ const Header = () => {
     const cartItems = useSelector((store) => store.cart?.items) || [];
 
     useEffect(() => {
-        // console.log("useEffect called");
     }, []);
 
     return (

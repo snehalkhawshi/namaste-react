@@ -4,7 +4,6 @@ class UserClass extends React.Component {
 
     constructor(props) {
         super(props);
-        console.log("Child constructor");
 
         this.state = {
             userInfo: {
@@ -15,23 +14,15 @@ class UserClass extends React.Component {
         };
     }
 
-    // 🔹 Runs before render (Mounting + Updating)
     static getDerivedStateFromProps(props, state) {
-        console.log("getDerivedStateFromProps");
-        return null; // rarely used
+        return null; 
     }
 
-    // 🔹 Controls re-rendering
     shouldComponentUpdate(nextProps, nextState) {
-        console.log(nextProps, nextState);
-        console.log("shouldComponentUpdate");
-        return true; // must return true to re-render
+        return true; 
     }
 
-    // 🔹 Runs after first render (Best for API calls)
     async componentDidMount() {
-        console.log("componentDidMount");
-
         const response = await fetch(
             "https://api.github.com/users/snehalkhawshi"
         );
@@ -42,25 +33,17 @@ class UserClass extends React.Component {
         });
     }
 
-    // 🔹 Capture info before DOM updates
     getSnapshotBeforeUpdate(prevProps, prevState) {
-        console.log("getSnapshotBeforeUpdate");
         return null;
     }
 
-    // 🔹 Runs after update
     componentDidUpdate(prevProps, prevState, snapshot) {
-        console.log("componentDidUpdate");
     }
 
-    // 🔹 Cleanup
     componentWillUnmount() {
-        console.log("componentWillUnmount");
     }
 
     render() {
-        console.log("render");
-
         const { name, location, avatar_url } = this.state.userInfo;
 
         return (

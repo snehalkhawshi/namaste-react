@@ -1,10 +1,7 @@
 import { CDN_URL } from "../utils/constants";
 
 const RestaurantCard = (props) => {
-	// console.log("The Shubham Kumar");
-	// console.log(props,"props");
 	const { restaurentData }  = props;
-	// console.log(restaurentData , "restaurentData");
 	const info = restaurentData?.info || {};
 
 	let {
@@ -35,25 +32,6 @@ const RestaurantCard = (props) => {
 		</div>
 	);
 };
-
-// Higher order component
-
-// input ---- reastaurantCArd ----- promotedRestaurantCard
-
-// withPromotedLabel is HOC 
-// take RestaurantCard as input
-// HOC return another component
-
-// when we HOC this HOC are pure component
-
-// () => {
-// 		return (
-// 			<div>
-// 				<label>Promoted</label>
-// 				<RestaurantCard /> 
-// 			</div>
-// 		)
-// 	}
 
 export const withPromotedLabel = (RestaurantCard) => {
 	return (props) => {

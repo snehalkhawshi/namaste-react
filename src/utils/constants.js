@@ -25,7 +25,7 @@ export const isPrime = (num) => {
 };
 
 
-// Function to find the nth prime number
+
 export const findNthPrime = (n) => {
   n = Number(n);
 
